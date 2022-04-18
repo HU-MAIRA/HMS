@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h2 class="display-4 p-2 font-weight-bold">Welcome to </h2>
+    <h1 class ="p-4">Hotel Management System</h1>
+    
+    <div> </div>
+    <div>
+        <h2><a class="nav-link text-dark btn-primary font-weight-bold" style="position: relative; margin: 10px; background-color: greenyellow; " asp-controller="Admin" asp-action="AdminMain">Admin</a></h2>
+        <h2><a class="nav-link text-dark btn-primary font-weight-bold" style="position: relative; margin: 10px; background-color: lightpink; " asp-controller="Guest" asp-action="GuestMain">Guest</a></h2>
+        @*<button id="myAdminButton" class="float-lg-none submit-button w-25" style="background-color: greenyellow;">Admin</button>
+        <button id="myStudentButton" class="float-lg-none submit-button w-25" style="background-color: lightgreen;">Book a Room</button>*@
+    </div>
+</div>

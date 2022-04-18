@@ -1,0 +1,65 @@
+﻿@model HMS_MVC.Models.RoomDetail
+
+@{
+    ViewData["Title"] = "Add Room Details";
+}
+
+<form method="post" asp-controller="Admin" asp-action="AddRoom" style="background-color: lavenderblush">
+    <div>
+        <div class="row">
+            <div class="col-8">
+
+                <div class="form-group row">
+                    <div class="col-4">
+                        <b><label asp-for="Roomnumber"></label> </b>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="Roomnumber" class="form-control" />
+                        <span asp-validation-for="Roomnumber" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-4">
+                        <b> <label asp-for="Roomstatus"></label> </b>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="Roomstatus" class="form-control" />
+                        <span asp-validation-for="Roomstatus" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-4">
+                        <b> <label asp-for="Roomtype"></label></b>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="Roomtype" class="form-control" />
+                        <span asp-validation-for="Roomtype" class="text-danger"></span>
+                    </div>
+                </div>
+
+                
+
+                
+               
+                <div class="form-group row">
+                    @*<div class="col-6 offset-4 row">*@
+                    <div class="col-4 offset-4">
+                        <input type="submit" class="btn btn-info w-100" value="Add" />
+                    </div>
+
+                    @if (ViewBag.Message != null)
+                    {
+                        <a class="nav-link text-dark btn-primary font-weight-bold" style="position: relative; margin: 10px; background-color: #ff8d00;float: right" asp-controller="Admin" asp-action="GetRoomList">Get Room List</a>
+                        <script type="text/javascript">
+                                                window.onload = function () {
+                                                alert("@ViewBag.Message");
+                                                };
+                        </script>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

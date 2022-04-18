@@ -1,0 +1,58 @@
+﻿@model HMS_MVC.Models.Booking;
+
+@{
+    ViewData["Title"] = "Cancel Booking";
+}
+
+<h1>Cancel your booking here.</h1>
+
+<form method="post" asp-controller="Guest" asp-action="CancelBooking" style="background-color: honeydew">
+    <div>
+        <div class="row">
+            <div class="col-8">
+                <div class="form-group row">
+                    <div class="col-4">
+                        <b><label asp-for="RoomNumber"></label></b>
+
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="RoomNumber" class="form-control" />
+                        <span asp-validation-for="RoomNumber" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-4">
+
+                        <b> <label asp-for="Custid"></label></b>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="Custid" class="form-control" />
+                        <span asp-validation-for="Custid" class="text-danger"></span>
+                    </div>
+                </div>
+
+
+
+
+                <div class="form-group row">
+                    @*<div class="col-6 offset-4 row">*@
+                    <div class="col-4 offset-4">
+                        <input type="submit" class="btn btn-info w-100" value="Delete" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+<h2>   <i>Please visit us again!</i>  </h2>
+
+@*@if (ViewBag.Message != null)
+{
+    <a class="nav-link text-dark btn-primary font-weight-bold" style="position: relative; margin: 10px; background-color: #ff8d00;float: right" asp-controller="Guest" asp-action="GetAllRooms">Get All room details</a>
+    <script type="text/javascript">
+                                                window.onload = function () {
+                                                alert("@ViewBag.Message");
+                                                };
+    </script>*@

@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "AdminMain";
+}
+
+<div class="text-center" >
+    <h1 class="display-4"> <b> Welcome  Admin </b></h1>
+    <br />
+
+    
+    <div>
+       
+        <h2><a class="nav-link text-dark btn-primary font-weight-bold" style="position: relative; margin: 10px; background-color: lightskyblue; " asp-controller="Admin" asp-action="AddRoom">Add Room Details</a></h2>
+        <br />
+
+        <h2><a class="nav-link text-dark btn-primary font-weight-bold" style="position: relative; margin: 10px; background-color: thistle; " asp-controller="Admin" asp-action="GetRoomList">Get Room List</a></h2>
+        <br />
+
+        <h2><a class="nav-link text-dark btn-primary font-weight-bold" style="position: relative; margin: 10px; background-color: lavender; " asp-controller="Admin" asp-action="UpdateRoom">Update Room</a></h2>
+    </div>
+</div>

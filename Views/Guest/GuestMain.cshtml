@@ -1,0 +1,17 @@
+﻿@*Guest Login View*@
+
+@{
+    ViewData["Title"] = "BookingMain";
+}
+
+<div class="text-center">
+    <h1 class="display-4"> <b> Welcome Guest</b></h1>
+    <br />
+
+    <div>
+        <h2><a class="nav-link text-dark btn-primary font-weight-bold" style="position: relative; margin: 10px; background-color: lightcyan; " asp-controller="Guest" asp-action="AddBooking">Book a Room</a></h2>
+        <br />
+        <h2><a class="nav-link text-dark btn-primary font-weight-bold" style="position: relative; margin: 10px; background-color: lightgoldenrodyellow; " asp-controller="Guest" asp-action="CancelBooking">Cancel Booking</a></h2>
+    </div>
+</div>
+
